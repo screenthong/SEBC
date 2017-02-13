@@ -77,3 +77,59 @@ Journal backup:           inode blocks
 ## 4. Disable transparent hugepages
  * append /etc/grub.conf
   * transparent_hugepage=never   **RHEL 6 disables THP on systems with < 1G of ram
+
+## 5. List your network interface configuration
+
+```
+[ec2-user@ip-172-31-8-59 mm]$ sudo ifconfig -a
+eth0      Link encap:Ethernet  HWaddr 02:1F:14:61:92:E3
+          inet addr:172.31.8.59  Bcast:172.31.15.255  Mask:255.255.240.0
+          inet6 addr: fe80::1f:14ff:fe61:92e3/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1511 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1005 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:112977 (110.3 KiB)  TX bytes:126314 (123.3 KiB)
+          Interrupt:247
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+```
+
+## 6. List forward and reverse host lookups using getent or nslookup
+
+```
+[ec2-user@ip-172-31-8-59 mm]$ getent hosts ip-172-31-8-59.ap-southeast-1.compute.internal
+172.31.8.59     ip-172-31-8-59.ap-southeast-1.compute.internal
+[ec2-user@ip-172-31-8-59 mm]$ nslookup
+> 172.31.8.59
+Server:         172.31.0.2
+Address:        172.31.0.2#53
+
+Non-authoritative answer:
+59.8.31.172.in-addr.arpa        name = ip-172-31-8-59.ap-southeast-1.compute.internal.
+```
+
+## 7. Show the nscd service is running
+```
+[ec2-user@ip-172-31-8-59 mm]$ sudo yum install nscd -y
+[ec2-user@ip-172-31-8-59 mm]$ sudo service nscd start
+Starting nscd:                                             [  OK  ]
+[ec2-user@ip-172-31-8-59 mm]$ sudo chkconfig nscd on
+[ec2-user@ip-172-31-8-59 mm]$ sudo service nscd status
+nscd (pid 1857) is running...
+```
+
+## 8. Show the ntpd service is running
+```
+[ec2-user@ip-172-31-8-59 mm]$ sudo service ntpd start
+Starting ntpd:                                             [  OK  ]
+[ec2-user@ip-172-31-8-59 mm]$ sudo service ntpd status
+ntpd (pid  1953) is running...
+```
