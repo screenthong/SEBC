@@ -1,3 +1,13 @@
+## 0. edit /etc/hosts
+
+```
+172.31.8.59     sebc-cm
+172.31.1.71     sebc-dn1
+172.31.13.38    sebc-dn2
+172.31.13.155   sebc-dn3
+172.31.2.87     sebc-dn4
+```
+
 ## 1. Check vm.swappiness on all your nodes
   * sudo sysctl vm.swappiness=1
   * sudo vi /etc/sysctl.conf 
