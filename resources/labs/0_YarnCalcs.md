@@ -3,6 +3,6 @@
 ```
 worker vcores and number of worker nodes are affect to workload factor.
 
-number of workload is not significant . It depends on resouce that didn't be reserved .
+number of workload is not significant . It depends on resouce that didn't be reserved by services.
 
 ```
