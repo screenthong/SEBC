@@ -225,3 +225,15 @@ Deleted /results/tg-10GB-4-4-1024
 Deleted /results/ts-10GB-4-4-1024
 Testing loop ended on Tue Feb 14 22:04:22 EST 2017
 ```
+## slowest runs
+
+```
+teragen : maps=4 reduce=2 memory=512      real    0m56.277s
+terasort : maps=4 reduce=4 memory=1024    real    1m3.778s
+```
+
+## fastest runs
+```
+teragen : maps=3 reduce=2 memory=512      real    0m26.024s
+terasort : maps=3 reduce=3 memory=512     real    0m51.513s
+```
