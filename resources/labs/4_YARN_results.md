@@ -1,4 +1,4 @@
-
+```
 sys     0m0.711s
 terasort : maps=2 reduce=3 memory=1024
 
@@ -224,3 +224,4 @@ sys     0m0.804s
 Deleted /results/tg-10GB-4-4-1024
 Deleted /results/ts-10GB-4-4-1024
 Testing loop ended on Tue Feb 14 22:04:22 EST 2017
+```
