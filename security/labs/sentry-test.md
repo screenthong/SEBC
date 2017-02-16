@@ -11,7 +11,7 @@ Enter password for jdbc:hive2://ip-172-31-8-59.ap-southeast-1.compute.internal:1
 Connected to: Apache Hive (version 1.1.0-cdh5.8.4)
 Driver: Hive JDBC (version 1.1.0-cdh5.8.4)
 Transaction isolation: TRANSACTION_REPEATABLE_READ
-0: jdbc:hive2://ip-172-31-8-59.ap-southeast-1> `show tables;`
+0: jdbc:hive2://ip-172-31-8-59.ap-southeast-1> show tables;
 INFO  : Compiling command(queryId=hive_20170215223939_c14ec6f8-915f-449e-956d-7a53d8eafee2): show tables
 INFO  : Semantic Analysis Completed
 INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:tab_name, type:string, comment:from deserializer)], properties:null)
