@@ -1,4 +1,4 @@
-## [root@ip-172-31-13-35 ~]# cat /var/kerberos/krb5kdc/kdc.conf
+## [root@ip-172-31-8-245 ~]# cat /var/kerberos/krb5kdc/kdc.conf
 
 ```
 [kdcdefaults]
@@ -6,7 +6,7 @@
  kdc_tcp_ports = 88
 
 [realms]
- SCREENTHONG.REMOTE = {
+ SCREENTHONG.SG = {
   #master_key_type = aes256-cts
   acl_file = /var/kerberos/krb5kdc/kadm5.acl
   dict_file = /usr/share/dict/words
