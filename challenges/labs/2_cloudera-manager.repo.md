@@ -8,3 +8,4 @@ baseurl=https://archive.cloudera.com/cm5/redhat/5/x86_64/cm/5/
 gpgkey =https://archive.cloudera.com/cm5/redhat/5/x86_64/cm/RPM-GPG-KEY-cloudera 
 gpgcheck = 0
 ```
+ 
