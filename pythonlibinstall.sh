@@ -7,6 +7,6 @@
 /usr/bin/anaconda/bin/conda update numpy
 
 # link python to /usr/bin/anaconda/
-cd /usr/bin
-rm python
+sudo su
+rm /usr/bin/python
 ln -s /usr/bin/anaconda/bin/python2.7 /usr/bin/python
